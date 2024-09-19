@@ -36,7 +36,7 @@ const Register = () => {
                 const email = user.email;
                 const userData = { email };
 
-                fetch('http://localhost:5000/users', {
+                fetch('https://asr-travels-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ const Register = () => {
             console.log('User created:', user);
 
             const userData = { email };
-            const response = await fetch('http://localhost:5000/users', {
+            const response = await fetch('https://asr-travels-server.vercel.app/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -19,7 +19,7 @@ const Login = () => {
                 const email = user.email;
                 const userData = { email };
 
-                fetch('http://localhost:5000/users', {
+                fetch('https://asr-travels-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

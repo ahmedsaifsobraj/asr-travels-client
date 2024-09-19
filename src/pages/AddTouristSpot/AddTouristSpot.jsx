@@ -20,7 +20,7 @@ const AddTouristSpot = () => {
         const time = form.time.value;
         console.log(img, spotname, country, location, description, cost, seasonality, time);
         const spot = { img, spotname, country, location, description, cost, seasonality, time,  userId: user.uid };
-        fetch('http://localhost:5000/spots', {
+        fetch('https://asr-travels-server.vercel.app/spots', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

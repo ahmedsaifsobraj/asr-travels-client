@@ -4,7 +4,7 @@ import TouristSpot from './TouristSpot';
 const AllTouristSpot = () => {
     const [spots, setSpots] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/spots', {
+        fetch('https://asr-travels-server.vercel.app/spots', {
             method: 'GET',
             headers: {
                 'content-type': 'application.json'

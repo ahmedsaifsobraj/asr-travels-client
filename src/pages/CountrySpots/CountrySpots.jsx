@@ -7,7 +7,7 @@ const CountrySpots = () => {
     console.log(country);
     const [spots, setSpots] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/spots/${country}`, {
+        fetch(`https://asr-travels-server.vercel.app/spots/${country}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'

@@ -10,7 +10,7 @@ const MyList = () => {
     const [spots, setSpots] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/spots/user/${user.uid}`, {
+        fetch(`https://asr-travels-server.vercel.app/spots/user/${user.uid}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'

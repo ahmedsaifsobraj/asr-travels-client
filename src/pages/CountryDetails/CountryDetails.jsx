@@ -5,7 +5,7 @@ const CountryDetails = () => {
     const { id } = useParams();
     const [country, setCountry] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/countries/${id}`, {
+        fetch(`https://asr-travels-server.vercel.app/countries/${id}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'

@@ -4,7 +4,7 @@ import Country from './Country';
 const Countries = () => {
     const [countries,setCountries]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/countries',{
+        fetch('https://asr-travels-server.vercel.app/countries',{
             method:'GET',
             headers:{
                 'content-type':'application/json'
