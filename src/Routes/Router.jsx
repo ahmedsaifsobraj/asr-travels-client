@@ -10,6 +10,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import RequireAuth from "../Authentication/RequireAuth/RequireAuth";
 import Countries from "../pages/Home/Countries";
 import CountryDetails from "../pages/CountryDetails/CountryDetails";
+import CountrySpots from "../pages/CountrySpots/CountrySpots";
 
 const router = createBrowserRouter([
     {
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
         {
             path:"countries/:id",
             element:<CountryDetails></CountryDetails>
+        },
+        ,
+        {
+            path:'spots/:country',
+            element:<CountrySpots></CountrySpots>
         }
       ]
     },

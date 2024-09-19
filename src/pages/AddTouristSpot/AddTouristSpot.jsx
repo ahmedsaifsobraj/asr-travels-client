@@ -1,8 +1,13 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import Swal from 'sweetalert2';
+import app from '../../firebase.init';
+import { getAuth } from 'firebase/auth';
 
 const AddTouristSpot = () => {
-    const handleAddSpots =e=>{
+    const auth = getAuth(app)
+    const [user] = useAuthState(auth);
+    const handleAddSpots = e => {
         e.preventDefault();
         const form = e.target;
         const img = form.img.value;
@@ -13,24 +18,24 @@ const AddTouristSpot = () => {
         const cost = form.cost.value;
         const seasonality = form.seasonality.value;
         const time = form.time.value;
-        console.log(img,spotname,country,location,description,cost,seasonality,time);
-        const spot={img,spotname,country,location,description,cost,seasonality,time};
-        fetch('http://localhost:5000/spots',{
-            method:'POST',
-            headers:{
-                'content-type':'application/json'
+        console.log(img, spotname, country, location, description, cost, seasonality, time);
+        const spot = { img, spotname, country, location, description, cost, seasonality, time,  userId: user.uid };
+        fetch('http://localhost:5000/spots', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
             },
-            body:JSON.stringify(spot)
+            body: JSON.stringify(spot)
         })
-        .then(res =>res.json())
-        .then(data => {
-            console.log(data);
-            Swal.fire({
-                title: "Success",
-                text: "You have successfuly added a tourist spot.",
-                icon: "success"
-              });
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                Swal.fire({
+                    title: "Success",
+                    text: "You have successfuly added a tourist spot.",
+                    icon: "success"
+                });
+            })
     }
     return (
         <div className="hero bg-base-200 min-h-screen">
@@ -53,7 +58,7 @@ const AddTouristSpot = () => {
                             <input type="spotname" placeholder="spotname" name='spotname' className="input input-bordered" required />
                         </div>
                         <div className="form-control">
-                        <label className="label">
+                            <label className="label">
                                 <span className="label-text">Select Country</span>
                             </label>
                             <select name='country' className="select select-bordered w-full max-w-xs" required >
@@ -69,7 +74,7 @@ const AddTouristSpot = () => {
                             <label className="label">
                                 <span className="label-text">Location</span>
                             </label>
-                            <input name='location' type="location" placeholder="location"  className="input input-bordered" required />
+                            <input name='location' type="location" placeholder="location" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -89,7 +94,7 @@ const AddTouristSpot = () => {
                             </label>
                             <select name='seasonality' className="select select-bordered w-full max-w-xs" required>
                                 <option>Summer</option>
-                                <option>Winter</option>                                
+                                <option>Winter</option>
                             </select>
                         </div>
                         <div className="form-control">

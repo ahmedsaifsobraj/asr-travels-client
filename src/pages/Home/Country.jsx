@@ -5,10 +5,14 @@ const Country = ({ country }) => {
     const { _id,img, country_name, des } = country;
     const navigate = useNavigate();
     const handleCountryDetails =()=>{
-        navigate(`/countries/${_id}`)
+        navigate(`/countries/${_id}`);
     }
+    const handleTouristSpots =()=>{
+        navigate(`/spots/${country_name}`);
+        console.log(country_name);
+    } 
     return (
-        <div className="mx-auto card bg-base-100 w-96 shadow-xl">
+        <div onClick={handleTouristSpots} className="mx-auto card bg-base-100 w-96 shadow-xl">
             <figure className="px-10 pt-10">
                 <img
                     src={img}

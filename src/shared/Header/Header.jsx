@@ -23,8 +23,8 @@ const Header = () => {
     const links =
         <>
             <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/alltouristspot'>All Tourist Spot</NavLink></li>
-            <li><NavLink to='/addtouristspot'>Add Tourist Spot</NavLink></li>
+            <li><NavLink to='/alltouristspot'>Destinations</NavLink></li>
+            <li><NavLink to='/addtouristspot'>Share Destination</NavLink></li>
             <li><NavLink to='/mylist'>My List</NavLink></li>
         </>
 
