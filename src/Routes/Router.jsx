@@ -8,6 +8,8 @@ import Register from "../Authentication/Register/Register";
 import MyList from "../pages/MyList/MyList";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import RequireAuth from "../Authentication/RequireAuth/RequireAuth";
+import Countries from "../pages/Home/Countries";
+import CountryDetails from "../pages/CountryDetails/CountryDetails";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
         {
             path:'register',
             element:<Register></Register>
+        },
+        {
+            path:'countries',
+            element:<Countries></Countries>
+        },
+        {
+            path:"countries/:id",
+            element:<CountryDetails></CountryDetails>
         }
       ]
     },
