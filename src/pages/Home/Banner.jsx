@@ -10,7 +10,7 @@ const Banner = () => {
                         className="w-full" />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href="#slide4" className="btn btn-circle">❮</a>
-                        <h3 className='text-5xl text-white font-bold'>Bangkok</h3>
+                        <h3 className='text-2xl md:text-5xl text-white font-bold'>Bangkok</h3>
                         <a href="#slide2" className="btn btn-circle">❯</a>
                         
                     </div>
@@ -21,17 +21,17 @@ const Banner = () => {
                         className="w-full" />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href="#slide1" className="btn btn-circle">❮</a>
-                        <h3 className='text-5xl text-white font-bold'>Kualalampur</h3>
+                        <h3 className='text-2xl md:text-5xl text-white font-bold'>Kualalampur</h3>
                         <a href="#slide3" className="btn btn-circle">❯</a>
                     </div>
                 </div>
                 <div id="slide3" className="carousel-item relative w-full">
                     <img style={{height:'450px'}}
-                        src="https://images.pexels.com/photos/3441726/pexels-photo-3441726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        src="https://images.unsplash.com/photo-1653932133705-851f4547eb2b?q=80&w=1892&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         className="w-full" />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href="#slide2" className="btn btn-circle">❮</a>
-                        <h3 className='text-5xl text-white font-bold'>Bali</h3>
+                        <h3 className='text-2xl md:text-5xl text-white font-bold'>Dhaka</h3>
                         <a href="#slide4" className="btn btn-circle">❯</a>
                     </div>
                 </div>

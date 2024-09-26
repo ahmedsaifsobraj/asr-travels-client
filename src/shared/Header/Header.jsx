@@ -8,16 +8,16 @@ import Swal from 'sweetalert2';
 const Header = () => {
     const auth = getAuth(app)
     const [user] = useAuthState(auth);
-    const [signOut]=useSignOut(auth);
+    const [signOut] = useSignOut(auth);
 
-    const handleSignOut=async()=>{
+    const handleSignOut = async () => {
         const success = await signOut();
-        if(success){
+        if (success) {
             Swal.fire({
                 title: "Success",
                 text: "You have successfuly loged out.",
                 icon: "success"
-              });
+            });
         }
     }
     const links =
@@ -64,10 +64,15 @@ const Header = () => {
                 </ul>
             </div>
             {
-                user?.uid ? <div className="navbar-end">
-                    <p onClick={handleSignOut} className="btn bg-teal-500	text-white">Sign Out</p>
-                </div> : <div className="navbar-end"><NavLink to='/login' className="btn bg-teal-500	text-white">Login</NavLink>
-                    <NavLink to='/register' className="btn bg-teal-500 text-white">Register</NavLink></div>
+                user?.uid ?
+                    <div className="navbar-end">
+                        <p onClick={handleSignOut} className="btn bg-teal-500	text-white">Sign Out</p>
+                    </div> :
+                    <div className="navbar-end">
+                        <NavLink to='/register' className="hidden md:flex btn bg-teal-500 text-white mr-3">Register</NavLink>
+                        <NavLink to='/login' className="btn bg-teal-500	text-white ">Login</NavLink>
+                    </div>
+
             }
 
         </div>

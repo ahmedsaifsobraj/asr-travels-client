@@ -23,7 +23,7 @@ const CountrySpots = () => {
     }, [country])
     return (
         <div>
-            <h1 className='text-5xl font-bold text-center text-teal-500 my-6'>Attractions Of {country}</h1>
+            <h1 className='text-2xl md:text-5xl font-bold text-center text-teal-500 mx-auto'>Attractions Of {country}</h1>
             <div className='my-6 grid lg:grid-cols-3 gap-4 '>
                 {spots.map(spot => <CountrySpot key={spot._id} spot={spot}></CountrySpot>)}
             </div>

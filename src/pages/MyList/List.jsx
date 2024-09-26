@@ -3,7 +3,7 @@ import React from 'react';
 const List = ({spot}) => {
     const {img, spotname, country, location, description, cost, seasonality, time}=spot;
     return (
-        <div className="card bg-base-100 w-96 shadow-xl mx-auto">
+        <div className="card bg-base-100 w-full sm:w-96 shadow-xl mx-auto">
         <figure>
             <img className='w-full' style={{height:'200px'}}
                 src={img}

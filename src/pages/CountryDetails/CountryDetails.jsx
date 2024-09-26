@@ -20,7 +20,7 @@ const CountryDetails = () => {
 
     }, [id])
     return (
-        <div className="card lg:card-side bg-base-100 shadow-xl">
+        <div className="card lg:card-side bg-base-200 shadow-xl mt-8 mb-8 px-4">
             <figure>
                 <img
                     src={country.img}

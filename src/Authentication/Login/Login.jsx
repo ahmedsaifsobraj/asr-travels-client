@@ -54,12 +54,12 @@ const Login = () => {
     };
 
     return (
-        <div className="hero bg-base-200 min-h-screen flex flex-col justify-center items-center">
+        <div className="hero bg-base-100 min-h-screen flex flex-col justify-center items-center">
             <div className="text-center mt-5 mb-8">
                 <h1 className="text-5xl font-bold text-teal-500">Login</h1>
                 <p className='mt-2'>Please sign in to continue.</p>
             </div>
-            <div className="card bg-base-100 w-full max-w-sm shadow-2xl mb-8">
+            <div className="card bg-base-200 w-full max-w-sm shadow-2xl mb-8 px-4 py-8">
                 <form onSubmit={handleLogin} className="card-body">
                     <div className="form-control">
                         <label className="label">

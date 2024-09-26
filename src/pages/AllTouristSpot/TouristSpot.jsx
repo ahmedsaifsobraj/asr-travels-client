@@ -6,7 +6,7 @@ const TouristSpot = ({ spot }) => {
 
         //
 
-        <div className="card bg-base-100 w-96 shadow-xl mx-auto">
+        <div className="card bg-base-100 w-full sm:w-96 shadow-xl mx-auto">
             <figure>
                 <img className='w-full' style={{height:'200px'}}
                     src={img}

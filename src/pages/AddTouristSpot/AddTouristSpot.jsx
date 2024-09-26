@@ -38,12 +38,12 @@ const AddTouristSpot = () => {
             })
     }
     return (
-        <div className="hero bg-base-200 min-h-screen">
+        <div className="hero bg-base-100 flex flex-col justify-center items-center">
             <div className="hero-content flex-col">
-                <div className="text-center my-6">
-                    <h1 className="text-5xl font-bold">Share Tourist Spots</h1>
+                <div className="text-center">
+                    <h1 className="text-2xl lg:text-5xl font-bold text-teal-500">Share Tourist Spots</h1>
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div className="card bg-base-200 w-full max-w-sm shrink-0 shadow-2xl">
                     <form onSubmit={handleAddSpots} className="card-body">
                         <div className="form-control">
                             <label className="label">
