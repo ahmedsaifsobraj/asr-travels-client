@@ -21,7 +21,7 @@ const AllTouristSpot = () => {
     return (
         <div>
             <h1 className='text-2xl lg:text-5xl font-bold text-center text-teal-500 my-6'>Explore All Destinations</h1>
-            <div className='my-6 grid lg:grid-cols-3 gap-4 px-5'>
+            <div className='my-6 grid lg:grid-cols-3 gap-4 px-5 lg:px-1'> 
                 {
                     spots.map(spot =><TouristSpot key={spot._id} spot={spot}></TouristSpot>)
                 }
